@@ -8,7 +8,7 @@ body {
 }
 
 // *{ 
-//     border: 1px solid red; 
+//     // border: 1px solid red; 
 // } 
 html {
     scroll-behavior: smooth;
@@ -19,8 +19,7 @@ html {
 @mixin change-btn {
     background-color: #1e1e1e;
     color: white;
-    height: 7vh;
-    width: 15vw;
+    padding:10px;
     border-radius: 10px;
     font-size: 1.3rem;
     text-align: center;
@@ -71,22 +70,23 @@ html {
 }
 
 .banner {
-    // background-image: url('/assets/img/imageBkg.png');
-    background-image: url('/Palette/assets/img/imageBkg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    background-size: 100% 100%;
     height: 100vh;
-    min-width: 1200px;
+    display: grid;
+    overflow: hidden;
+    
+
+    &__content, &>img{
+        grid-area: 1/1/2/2;
+        width: 100%;
+    }
 }
 
 .header {
     position: relative;
     &__navigation {
         display: flex;
-        gap: 7rem;
+        justify-content: space-between;
+        gap: 10px;
         padding: 2rem;
 
         a {
@@ -266,10 +266,7 @@ html {
     color: rgb(255, 255, 255);
 }
 
-.modal__container-registration {
-    width: 20vw;
-    height: 7vh;
-}
+
 
 #error {
     color: rgb(255, 49, 49);
@@ -335,16 +332,23 @@ html {
 
 .container__information {
     display: flex;
-    gap: 5rem;
+    gap: 10px;
     justify-content: space-around;
-    padding: 4rem;
-    min-width: 1000px;
+    padding: 4rem 1rem;
+
+    @media(max-width:900px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .content__info {
     gap: 1rem;
     text-transform: uppercase;
     @include display-flex;
+    @media(max-width:900px) {
+        width: 4        00px;
+    }
 
     &>span {
         font-size: 2rem;
@@ -356,7 +360,6 @@ html {
 }
 
 .container__drops {
-    min-width: 1200px;
     margin: 0 auto;
 
     h2 {
@@ -407,11 +410,6 @@ html {
     display: grid;
 }
 
-
-.container__mission {
-    min-width: 1200px;
-}
-
 .content__mission {
     @include flex-center;
     padding: 3rem;
@@ -428,26 +426,26 @@ html {
         width: 60%;
     }
 }
-
-.content__functions-color {
     
     .content-row {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        min-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        max-width: 1200px;
+        margin: 3rem auto;
 
         img {
             border-radius: 8px;
+            width: 100%;
         }
     }
-}
+
 
 .content-text {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #f4ede5;
-    width: 38%;
     border-radius: 8px;
     
 
@@ -462,7 +460,8 @@ html {
 
     button {
         @include change-btn;
-        width: 10vw;
+        margin-bottom: 3rem;
+        
     }
 }
 
@@ -487,12 +486,12 @@ html {
     }
 }
 
-.image-color-block {
-    display: flex;
-    justify-content: center;
-    padding: 5rem;
-    min-width: 1000px;
-}
+// .image-color-block {
+//     // display: flex;
+//     // justify-content: center;
+//     // padding: 5rem;
+//     // min-width: 1000px;
+// }
 
 .image-color-block__wrapper {
     @include grid-center;
@@ -501,13 +500,16 @@ html {
 
 .image-grid {
     @include grid-center;
-    gap: 1rem;
-    padding: 1rem;
-    perspective: 1000px;
+    gap: 2rem;
 }
 
 .image-grid__item {
     position: relative;
+    opacity: 0;
+
+    &.visible{
+        opacity: 1;
+    }
 
     img {
         border-radius: 8px;
@@ -515,7 +517,6 @@ html {
         display: block;
         padding: 0;
     }
-    
 }
 
 
@@ -525,8 +526,6 @@ html {
     flex-direction: column;
     background-color: #c6bc89;
     padding: 3rem;
-    width: 80%;
-    height: 77.5%;
     border-radius: 8px;
 
     h3 {
@@ -574,7 +573,6 @@ html {
 
 footer {
     border: 2px solid rgba(34, 34, 34, 0.25);
-    min-width: 1200px;
     .container__services {
         justify-content: space-around;
         @include display-flex;
@@ -654,7 +652,7 @@ footer {
     transform: translateX(3px);
 }
 
-.error__email {
+.error__email2 {
     display: block;
     color: red;
     font-size: 12px;
@@ -663,8 +661,8 @@ footer {
 
 .footer-img {
     text-align: center;
-    width: auto;
-    margin: 5rem;
+    width: 100%;
+    margin: 3rem 0;
 
 }
 

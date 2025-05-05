@@ -10,61 +10,64 @@
 
 <body>
     <div class="banner">
-        <header class="header">
-            <button class="header__burger-btn" id="burger">
-                <span></span><span></span><span></span>
-            </button>
-            <nav class="header__navigation">
-                <a href="#">Paints</a>
-                <a href="#">Samples</a>
-                <a href="#">Gallery</a>
-                <a href="#">FAQ</a>
-                <a href="#">Calculator</a>
-                <a href="#" class="login">Log In</a>
-                <a href="#">Cart</a>
-            </nav>
-        </header>
-        <div class="header__slogan">
-            <h1 class="header__title">Eco-Friendly Paints For A Healthy Home</h1>
-            <a href="#info" class="btn__scroll">Shop our colors</a>
+        <img src="./assets/img/imageBkg.png" alt="Изображение фона">
+        <div class="banner__content">
+            <header class="header">
+                <button class="header__burger-btn" id="burger">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="header__navigation">
+                    <a href="#">Paints</a>
+                    <a href="#">Samples</a>
+                    <a href="#">Gallery</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Calculator</a>
+                    <a href="#" class="login">Log In</a>
+                    <a href="#">Cart</a>
+                </nav>
+            </header>
+            <div class="header__slogan">
+                <h1 class="header__title">Eco-Friendly Paints For A Healthy Home</h1>
+                <a href="#info" class="btn__scroll">Shop our colors</a>
+            </div>
+    
+    
+            <form action="#" class="form__registr" name="form">
+                <div class="form-content">
+                    <span class="form__close-button">&times;</span>
+                    <div class="modal__container-registration">
+                        <label for="userName"></label> <br />
+                        <input type="text" name="userName" class="userName" id="userName" placeholder="your name" />
+                        <br />
+                        <span class="error__name" id="error"></span>
+                    </div>
+                    <div class="modal__container-registration">
+                        <label for="email"></label> <br />
+                        <input type="email" name="email" id="email" class="email" placeholder="your email" />
+                        <br />
+                        <span class="error__email" id="error"></span>
+                    </div>
+                    <div class="modal__container-registration">
+                        <label for="password"></label> <br />
+                        <input type="password" name="password" id="password" class="password" placeholder="password" />
+                        <br />
+                        <span class="error__password" id="error"></span>
+                    </div>
+                    <div class="modal__container-registration">
+                        <label for="phone"></label> <br />
+                        <input type="phone" name="phone" id="phone" class="phone" placeholder="+7(XXX)XXX-XX-XX" />
+                        <br />
+                        <span class="error__phone" id="error"></span>
+                    </div>
+                    <input type="checkbox" id="checkbox" name="checkbox" />
+                    <label for="checkbox">
+                        <a href="#" class="data">Personal data processing agreement</a></label>
+                    <div class="container_registration">
+                        <input id="button" name="button" type="submit" value="register" />
+                    </div>
+                </div>
+            </form>
         </div>
-            
-
-        <form action="#" class="form__registr" name="form">
-            <div class="form-content">
-            <span class="form__close-button">&times;</span>
-            <div class="modal__container-registration">
-                <label for="userName"></label> <br />
-                <input type="text" name="userName" class="userName" id="userName" placeholder="your name" />
-                <br />
-                <span class="error__name" id="error"></span>
-            </div>
-            <div class="modal__container-registration">
-                <label for="email"></label> <br />
-                <input type="email" name="email" id="email" class="email" placeholder="your email" />
-                <br />
-                <span class="error__email" id="error"></span>
-            </div>
-            <div class="modal__container-registration">
-                <label for="password"></label> <br />
-                <input type="password" name="password" id="password" class="password" placeholder="password" />
-                <br />
-                <span class="error__password" id="error"></span>
-            </div>
-            <div class="modal__container-registration">
-                <label for="phone"></label> <br />
-                <input type="phone" name="phone" id="phone" class="phone" placeholder="+7(XXX)XXX-XX-XX" />
-                <br />
-                <span class="error__phone" id="error"></span>
-            </div>
-            <input type="checkbox" id="checkbox" name="checkbox" />
-            <label for="checkbox">
-                <a href="#" class="data">Personal data processing agreement</a></label>
-            <div class="container_registration">
-                <input id="button" name="button" type="submit" value="register" />
-            </div>
-        </div>
-        </form>
     </div>
 
     <section class="container__information" id="info">
@@ -130,7 +133,7 @@
                 <p> Dakhla — N°2555 <br> €39/1L</p>
             </div>
         </div>
-        <button class="btn-color">Shop all colors</button>
+
 
         <div class="hidden-colors">
             <div>
@@ -209,8 +212,8 @@
                 <img src="./assets/img/Color29.1090.png" class="color-card" alt="Изображение цвета Courchevel">
                 <p>Courchevel — N°1090<br> €39/1L</p>
             </div>
-
         </div>
+        <button class="btn-color">Shop all colors</button>
     </section>
 
     <section class="container__mission">
@@ -219,15 +222,15 @@
             <p>Pollution doesn’t stop at your front door – our VOC-free, environmentally friendly paints are
                 anti-bacterial, odourless, and clear your home of pollutants.</p>
         </div>
-        <div class="content__functions-color">
+        <!-- <div class="content__functions-color"> -->
             <div class="content-row">
-                <img class="content-image" src="./assets/img/img.png" alt="Изображение интерьера">
+                <img  src="./assets/img/img.png" alt="Изображение интерьера">
                 <div class="content-text">
                     <h3>Purifies indoor spaces of airborne pollutants.</h3>
                     <p>Anti-Molding, Zero VOC, Odourless and Easy to Clean</p>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
         <div class="content__about-color">
             <h2>No, No, No </h2>
             <ul>
@@ -238,7 +241,7 @@
             </ul>
         </div>
 
-        <div class="content__functions-color">
+        <!-- <div class="content__functions-color"> -->
             <div class="content-row">
                 <img class="content-image" src="./assets/img/img2.png" alt="Изображение интерьера">
                 <div class="content-text">
@@ -246,38 +249,36 @@
                     <button class="btn-color">Shop our samples</button>
                 </div>
             </div>
+        <!-- </div> -->
+    </section>
+
+
+    <section class="content-row">
+        <div class="image-grid">
+            <div class="image-grid__item">
+                <img src="./assets/img/imgColor1.png" alt="Изображение примера цвета">
+                <span class="color-circle" style="background-color: #6a727d;"></span>
+            </div>
+            <div class="image-grid__item">
+                <img src="./assets/img/imgColor2.png" alt="Изображение примера цвета">
+                <span class="color-circle" style="background-color: #455f46;"></span>
+            </div>
+            <div class="image-grid__item">
+                <img src="./assets/img/imgColor3.png" alt="Изображение примера цвета">
+                <span class="color-circle" style="background-color: #e0c3b1;"></span>
+            </div>
+            <div class="image-grid__item">
+                <img src="./assets/img/imgColor4.png" alt="Изображение примера цвета">
+                <span class="color-circle" style="background-color: #232122;"></span>
+            </div>
+        </div>
+        <div class="text-content">
+            <h3>Put some colours into your life!</h3>
+            <a href="#">@Palette.eco</a>
+            <p>Find more inspiration on our instagram account</p>
         </div>
     </section>
 
-    <section class="image-color-block">
-        <div class="image-color-block__wrapper">
-
-            <div class="image-grid">
-                <div class="image-grid__item">
-                    <img src="./assets/img/imgColor1.png" alt="Изображение примера цвета">
-                    <span class="color-circle" style="background-color: #6a727d;"></span>
-                </div>
-                <div class="image-grid__item">
-                    <img src="./assets/img/imgColor2.png" alt="Изображение примера цвета">
-                    <span class="color-circle" style="background-color: #455f46;"></span>
-                </div>
-                <div class="image-grid__item">
-                    <img src="./assets/img/imgColor3.png" alt="Изображение примера цвета">
-                    <span class="color-circle" style="background-color: #e0c3b1;"></span>
-                </div>
-                <div class="image-grid__item">
-                    <img src="./assets/img/imgColor4.png" alt="Изображение примера цвета">
-                    <span class="color-circle" style="background-color: #232122;"></span>
-                </div>
-            </div>
-
-            <div class="text-content">
-                <h3>Put some colours into your life!</h3>
-                <a href="#">@Palette.eco</a>
-                <p>Find more inspiration on our instagram account</p>
-            </div>
-        </div>
-    </section>
 
     <footer>
         <div class="container__services">
@@ -287,16 +288,10 @@
                 <form class="modal__footer-registration">
                     <label for="email2"></label>
                     <div class="email-input-wrapper">
-                        <input 
-                            type="email" 
-                            name="email" 
-                            id="email2" 
-                            class="email" 
-                            placeholder="E-mail address" 
-                        />
+                        <input type="email" name="email" id="email2" class="email" placeholder="E-mail address" />
                         <button type="submit" class="email-submit">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" />
                             </svg>
                         </button>
                     </div>
@@ -305,53 +300,53 @@
             </div>
 
             <div class="footer__right">
-                    <ul class="footer__services-list">
-                        <li>Shop</li>
-                        <li>Paints</li>
-                        <li>Samples</li>
-                        <li>Supplies</li>
-                    </ul>
-                    <ul class="footer__services-list">
-                        <li>Discover</li>
-                        <li>Gallery</li>
-                        <li>Air purifying</li>
-                        <li>Pro</li>
-                    </ul>
-                    <ul class="footer__services-list">
-                        <li>About</li>
-                        <li>About us</li>
-                        <li>FAQ</li>
-                        <li>Shipping & returns</li>
-                    </ul>
-                </div>
+                <ul class="footer__services-list">
+                    <li>Shop</li>
+                    <li>Paints</li>
+                    <li>Samples</li>
+                    <li>Supplies</li>
+                </ul>
+                <ul class="footer__services-list">
+                    <li>Discover</li>
+                    <li>Gallery</li>
+                    <li>Air purifying</li>
+                    <li>Pro</li>
+                </ul>
+                <ul class="footer__services-list">
+                    <li>About</li>
+                    <li>About us</li>
+                    <li>FAQ</li>
+                    <li>Shipping & returns</li>
+                </ul>
             </div>
-            <div class="content__contacts">
-                <p>Non toxic and VOC free, offering exceptional durability, coverage and washability</p>
-                <span>@Palette.eco</span>
-                <span>contact@palette.eco</span>
+        </div>
+        <div class="content__contacts">
+            <p>Non toxic and VOC free, offering exceptional durability, coverage and washability</p>
+            <span>@Palette.eco</span>
+            <span>contact@palette.eco</span>
+        </div>
+        
+            <img class="footer-img" src="./assets/img/Logo.png" alt="Изображение логотипа Palette">
+        
+        <div class="footer__drop-services">
+            <div class="drop">
+                <a href="#">Terms of service</a>
+                <a href="#">Privacy Policy</a>
             </div>
-            <div class="footer-img">
-                <img src="./assets/img/Logo.png" alt="Изображение логотипа Palette">
+            <div class="language-selector">
+                <button class="language-current">
+                    <span>EN</span>
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+                <ul class="language-dropdown">
+                    <li><a href="#" data-lang="en">English (EN)</a></li>
+                    <li><a href="#" data-lang="fr">Français (FR)</a></li>
+                    <li><a href="#" data-lang="ru">Russian (RU)</a></li>
+                </ul>
             </div>
-            <div class="footer__drop-services">
-                <div class="drop">
-                    <a href="#">Terms of service</a>
-                    <a href="#">Privacy Policy</a>
-                </div>
-                <div class="language-selector">
-                    <button class="language-current">
-                        <span>EN</span>
-                        <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-                            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </button>
-                    <ul class="language-dropdown">
-                        <li><a href="#" data-lang="en">English (EN)</a></li>
-                        <li><a href="#" data-lang="fr">Français (FR)</a></li>
-                        <li><a href="#" data-lang="ru">Russian (RU)</a></li>
-                    </ul>
-                </div>
-            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

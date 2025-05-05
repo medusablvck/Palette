@@ -18,6 +18,7 @@ const formRegistr = document.querySelector('.modal__footer-registration');
 const email2Input = document.getElementById('email2');
 const errorEmail2 = document.querySelector('.error__email2');
 const emailSubmit = document.querySelector('.email-submit');
+const imageItem = document.querySelectorAll('.image-grid__item')
 
 
 loginBtn.addEventListener('click', function (e) {
@@ -149,19 +150,19 @@ function validateEmail(email) {
 }
 
 // Смена языка, но только на кнопке 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const langSelector = document.querySelector('.language-selector');
     const langCurrent = langSelector.querySelector('.language-current span');
     const langOptions = langSelector.querySelectorAll('.language-dropdown a');
-    
+
     langOptions.forEach(option => {
-        option.addEventListener('click', function(e) {
+        option.addEventListener('click', function (e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
             langCurrent.textContent = lang.toUpperCase();
 
             console.log('Selected language:', lang);
-            
+
             // Закрываем dropdown после выбора
             langSelector.blur();
         });
@@ -171,10 +172,22 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', () => {
     const burgerBtn = document.getElementById('burger');
     const headerNav = document.querySelector('.header__navigation');
-    
+
     burgerBtn.addEventListener('click', () => {
         burgerBtn.classList.toggle('active');
         headerNav.classList.toggle('show');
-    
+
     });
 });
+
+
+const showBlocks = () => {
+    imageItem.forEach((item, index) => {
+        const rect = item.getBoundingClientRect()
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            item.style.transitionDelay = `${index * 1 } s`
+            item.classList.add('visible')
+        }
+    })
+}
+window.addEventListener('scroll', showBlocks)
