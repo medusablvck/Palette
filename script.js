@@ -18,7 +18,9 @@ const formRegistr = document.querySelector('.modal__footer-registration');
 const email2Input = document.getElementById('email2');
 const errorEmail2 = document.querySelector('.error__email2');
 const emailSubmit = document.querySelector('.email-submit');
-const imageItem = document.querySelectorAll('.image-grid__item')
+const imageItem = document.querySelectorAll('.image-grid__item');
+const headerBtn = document.querySelector('.burger');
+const headerNav = document.querySelector('.header__navigation');
 
 
 loginBtn.addEventListener('click', function (e) {
@@ -117,7 +119,7 @@ document.querySelector('.btn-color').addEventListener('click', function () {
 });
 
 
-// Проверка для отправки имейла 
+// Проверка для отправки имейла #2
 formRegistr.addEventListener('submit', function (e) {
     e.preventDefault();
     const email = email2Input.value.trim();
@@ -138,7 +140,7 @@ formRegistr.addEventListener('submit', function (e) {
         setTimeout(() => {
             email2Input.value = '';
             errorEmail2.textContent = '';
-        }, 2000);
+        }, 1000);
     } else {
         errorEmail2.textContent = 'Please enter a valid email';
         errorEmail2.style.color = 'red';
@@ -169,16 +171,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const burgerBtn = document.getElementById('burger');
-    const headerNav = document.querySelector('.header__navigation');
 
-    burgerBtn.addEventListener('click', () => {
-        burgerBtn.classList.toggle('active');
-        headerNav.classList.toggle('show');
+// Работа бургер кнопки
 
-    });
-});
+headerBtn.addEventListener('click', () => {
+    headerBtn.classList.toggle('open');
+    headerNav.classList.toggle('active');
+})
 
 
 const showBlocks = () => {
